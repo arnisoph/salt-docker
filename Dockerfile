@@ -1,6 +1,8 @@
 FROM debian:jessie
 MAINTAINER Arnold Bechtoldt <mail@arnoldbechtoldt.com>
 
+RUN mkdir -p /var/log/salt
+
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update -qq && \
     apt-get install -yV -o DPkg::Options::=--force-confold \
