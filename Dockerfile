@@ -26,6 +26,4 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
 #
 #RUN pip install salt
 
-COPY icomfabric/etc/salt /etc/salt
-
 RUN apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
