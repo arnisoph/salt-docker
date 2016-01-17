@@ -16,6 +16,7 @@ RUN echo "deb http://repo.saltstack.com/apt/debian/8/amd64/latest jessie main" >
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update -qq && \
     apt-get install -yV -o DPkg::Options::=--force-confold \
+        python-backports.ssl-match-hostname \
         salt-ssh
 
 #RUN export DEBIAN_FRONTEND=noninteractive; \
