@@ -1,8 +1,6 @@
 FROM debian:jessie
 MAINTAINER Arnold Bechtoldt <mail@arnoldbechtoldt.com>
 
-#TODO remove root dependency
-
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update -qq && \
     apt-get install -yV -o DPkg::Options::=--force-confold \
